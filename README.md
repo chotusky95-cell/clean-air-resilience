@@ -102,6 +102,18 @@ npm run dev
 
 ---
 
+## ☁️ Deploy to Vercel
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fchotusky95-cell%2Fclean-air-resilience)
+
+### 1-Click Web Deployment:
+1. Go to [Vercel Dashboard](https://vercel.com/new).
+2. Click **Import** next to `chotusky95-cell/clean-air-resilience`.
+3. Keep default settings (Vercel automatically picks up `vercel.json`, `frontend/`, and `api/index.py` serverless functions).
+4. Click **Deploy**.
+
+---
+
 ## 🏆 Hackathon Demonstration Script (for Judges)
 
 1. **Overview & GIS Map (`GIS & Hotspots` tab)**: Show active NASA FIRMS fires in Punjab/Haryana and wind streamlines transporting smoke into Delhi NCR. Click on an Anand Vihar pin to reveal the 48% stubble attribution.
@@ -110,3 +122,4 @@ npm run dev
 4. **Interactive What-If Simulation (`Policy Simulator` tab)**: Drag the Stubble Reduction slider to 50% and activate Odd-Even — observe the forecasted peak immediately plummet from 428 to 260 AQI, saving an estimated 5,600+ lives.
 5. **Farmer SMS & Alerts (`Alerts & Farmer SMS` tab)**: Enter a phone number for Dhuri, Sangrur, and dispatch a vernacular Punjabi advisory with ₹1,200/acre bio-decomposer subsidies.
 6. **Federated Learning & OpenAPI (`Federated OpenAPI` tab)**: Click "Trigger FedAvg Aggregation" to demonstrate privacy-preserving multi-state model exchange across 4 states, and open `/docs` to show the REST contract.
+
