@@ -15,7 +15,10 @@ from app.routers import (
     simulator_router,
     alerts_router,
     federated_router,
-    auth_router
+    auth_router,
+    citizen_router,
+    war_room_router,
+    impact_router
 )
 
 app = FastAPI(
@@ -34,7 +37,10 @@ app = FastAPI(
         {"name": "Automated GRAP Actions", "description": "Proactive 48h early triggers and SOP checklists"},
         {"name": "Policy & Climate Simulator", "description": "Interactive What-If policy scenario calculations"},
         {"name": "Multi-Channel Alert Center", "description": "Farmer SMS alerts and citizen health warnings"},
-        {"name": "Federated Learning Hub", "description": "Interstate collaborative model training"}
+        {"name": "Federated Learning Hub", "description": "Interstate collaborative model training"},
+        {"name": "Citizen Ground-Truth & Community Reports", "description": "Citizen incident logging, AI verification, and WhatsApp reporting"},
+        {"name": "CAQM Inter-State War Room", "description": "Cross-border smoke flux modeling and inter-state governance"},
+        {"name": "Health & Economic Burden Assessment", "description": "Epidemiological mortality, DALYs, and economic savings"}
     ]
 )
 
@@ -56,6 +62,9 @@ app.include_router(grap_router, prefix=settings.API_V1_STR)
 app.include_router(simulator_router, prefix=settings.API_V1_STR)
 app.include_router(alerts_router, prefix=settings.API_V1_STR)
 app.include_router(federated_router, prefix=settings.API_V1_STR)
+app.include_router(citizen_router, prefix=settings.API_V1_STR)
+app.include_router(war_room_router, prefix=settings.API_V1_STR)
+app.include_router(impact_router, prefix=settings.API_V1_STR)
 
 @app.get("/health", tags=["Health"])
 def health_check():

@@ -24,6 +24,12 @@ import PolicySimulator from './components/PolicySimulator';
 import AlertCenter from './components/AlertCenter';
 import FederatedHub from './components/FederatedHub';
 import ApiKeyPortal from './components/ApiKeyPortal';
+import CitizenReportCenter from './components/CitizenReportCenter';
+import InterstateWarRoom from './components/InterstateWarRoom';
+import BenchmarkGapAnalysis from './components/BenchmarkGapAnalysis';
+import HealthEconomicImpact from './components/HealthEconomicImpact';
+import RoadmapTimeline from './components/RoadmapTimeline';
+
 
 import {
   fetchStations,
@@ -178,6 +184,26 @@ export default function App() {
               <PolicySimulator />
             )}
 
+            {activeTab === 'citizen' && (
+              <CitizenReportCenter />
+            )}
+
+            {activeTab === 'warroom' && (
+              <InterstateWarRoom />
+            )}
+
+            {activeTab === 'benchmark' && (
+              <BenchmarkGapAnalysis />
+            )}
+
+            {activeTab === 'impact' && (
+              <HealthEconomicImpact />
+            )}
+
+            {activeTab === 'roadmap' && (
+              <RoadmapTimeline />
+            )}
+
             {activeTab === 'alerts' && (
               <AlertCenter alertsData={alertsData} />
             )}
@@ -189,6 +215,7 @@ export default function App() {
             {activeTab === 'apikeys' && (
               <ApiKeyPortal />
             )}
+
           </div>
         )}
 

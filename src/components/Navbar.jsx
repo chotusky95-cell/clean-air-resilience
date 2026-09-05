@@ -24,12 +24,18 @@ export default function Navbar({ activeTab, setActiveTab, grapStatus }) {
   const navItems = [
     { id: 'map', label: 'GIS & Hotspots', icon: Wind },
     { id: 'forecast', label: '72h AI Forecast', icon: TrendingUp },
-    { id: 'grap', label: 'GRAP Decision Board', icon: ShieldAlert },
-    { id: 'simulator', label: 'Policy Simulator', icon: Sliders },
+    { id: 'grap', label: 'GRAP Board', icon: ShieldAlert },
+    { id: 'simulator', label: 'Simulator', icon: Sliders },
+    { id: 'citizen', label: '📸 Citizen Reports', icon: ShieldAlert },
+    { id: 'warroom', label: '🏛️ CAQM War Room', icon: Wind },
+    { id: 'benchmark', label: '📊 Benchmark vs SAFAR', icon: TrendingUp },
+    { id: 'impact', label: '🩺 Health & Economic', icon: AlertTriangle },
+    { id: 'roadmap', label: '🎯 Scaling Roadmap', icon: CheckCircle2 },
     { id: 'alerts', label: 'Alerts & Farmer SMS', icon: BellRing },
     { id: 'federated', label: 'Federated OpenAPI', icon: Share2 },
-    { id: 'apikeys', label: 'API Keys & Auth', icon: Key },
+    { id: 'apikeys', label: 'API Keys', icon: Key },
   ];
+
 
   return (
     <header className="sticky top-0 z-50 bg-[#0f172a]/95 backdrop-blur-md border-b border-slate-800 shadow-xl px-4 lg:px-8 py-3">
